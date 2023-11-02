@@ -8,6 +8,9 @@
       case 'b':
         console.log('b');
         break;
+      case 'c':
+        console.log('c');
+        break:
       default:
         console.log('else랑 비슷');
     }
