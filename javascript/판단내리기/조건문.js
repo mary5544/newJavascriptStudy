@@ -62,3 +62,31 @@
     }
   <-
 */
+
+
+// > 문제 1
+/*
+    0세 ~ 5세 :1000원
+    5세 ~ 10세 : 1500원
+    10세 ~ 18세 : 2000원
+    18+ : 3000원
+    * 65세 이상 노인은 공짜
+*/
+
+const userAge = prompt('나이를 입력해주세요');
+
+if ( userAge && userAge.indexOf(' ') === -1 && userAge >= 0 ) {
+  if ( userAge < 5 ) {
+    alert('가격은 1000원 입니다');
+  } else if ( userAge >= 5 && userAge < 10 ) {
+      alert('가격은 1500원 입니다.');
+  } else if ( userAge >= 10 && userAge < 18 ) {
+      alert('가격은 2000원 입니다.');
+  } else if ( userAge >= 18 && userAge < 65 ) {
+      alert('가격은 3000원 입니다.');
+  } else {
+      alert('가격은 무료 입니다.');
+  };
+} else {
+  alert('올바른 나이를 입력해주세요');
+};
