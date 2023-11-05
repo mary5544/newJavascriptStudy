@@ -15,7 +15,7 @@
     console.log("hello");
   <-
 
-  >> break
+  >> break : break를 만나면 즉시 loop 탈출
   ->
     let userInput = prompt('너는 빠져나갈수 없다...');
     while (true) {
