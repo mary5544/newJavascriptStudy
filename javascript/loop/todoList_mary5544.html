@@ -52,8 +52,16 @@
           userInput = prompt(`명령을 입력해주세요!`);
         } else if (userInput === '삭제') {
           if (todoList[0]) {
-            todoList.shift();
-            console.log(`Todo Removed`);
+            userInput = prompt(`삭제하려는 index를 입력해주세요..\n(작업을 취소하려면 q를 입력해주세요)`);
+            while (userInput !== 'q') {
+              if (!Number.isNaN(parseInt(userInput))) {
+                todoList.splice(parseInt(userInput), 1);
+                console.log(`Todo Removed`);
+                break;
+              } else {
+                console.log('삭제하려는 index는 숫자만 입력 가능합니다.');
+              };
+            };
           } else {
             console.log('현제 목록에는 아무것도 없습니다.');
           }
