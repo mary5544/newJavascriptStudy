@@ -1,5 +1,6 @@
 let maximum = parseInt(prompt('maximum ?'));
 const targetNum = Math.floor((Math.random() * maximum) + 1);
+console.log(targetNum) // 치트키
 
 // 최대값 숫자 유효성검사
 while (!maximum) {
@@ -11,16 +12,16 @@ while (!maximum) {
 let guess = prompt(`1 ~ ${maximum}중 정답은?`),
     count = 1;
 
-while (parseInt(guess) !== targetNum) {
+while (parseInt(guess) !== targetNum) { // parseInt를 식 안에서 사용하면 기존 변수가 바뀌지 않고, 임시로 잠깐만 바뀜
   if (guess === 'q') break; // q입력시 나가는 기능
   guess = parseInt(guess); // 입력값 정수로 변환
 
   if (guess < targetNum) {
-    alert('목표보다 값이 작습니다.');
+    alert('목표보다 작습니다.');
     guess = prompt(`1 ~ ${maximum}중 정답은?`);
     count++;
   } else if (guess > targetNum){
-    alert('목표보다 값이 큽니다.');
+    alert('목표보다 큽니다.');
     guess = prompt(`1 ~ ${maximum}중 정답은?`);
     count++;
   } else {

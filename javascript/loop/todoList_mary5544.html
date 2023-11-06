@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List - home</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    html, body { background-color: #7148c8; }
+    * { color: #fff; margin: 0; padding: 0; }
+    ul, li { list-style: none; }
+    #appWrap { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .app { text-align: center; padding: 50px 60px; border-radius: 16px; background-color: #693acf;}
+    .title { padding-bottom: 30px; }
+    .listWrap li { font-size: 18px; font-weight: 500; }
+    .listWrap li:nth-of-type(n+2) { margin-top: 6px; }
+    button.start { padding: 5px 10px; color: #000; font-weight: bold; border-radius: 6px; border: none; cursor: pointer; transition: .2s ease; margin-top: 20px; outline: none; }
+    button.start:hover { transform: scale(.98); }
+    </style>
+</head>
+<body>
+  <div id="appWrap">
+    <div class="app">
+      <h1 class="title">Todo List</h1>
+      <ul class="listWrap">
+        <li>'추가' - todo를 추가합니다.</li>
+        <li>'보여줘' - todo 목록을 확인합니다.</li>
+        <li>'삭제' - todo를 삭제합니다.</li>
+        <li>'나가기' - todoList를 종료합니다.</li>
+      </ul>
+      <button class="start" onclick="appStart()">todoList 실행하기</button>
+    </div>
+  </div>
+
+  <script>
+    function appStart() {
+      const todoList = [];
+
+      let userInput = prompt(`명령을 입력해주세요!`);
+
+      while (userInput !== '나가기') {
+        if (userInput === '추가') {
+          userInput = prompt('추가 할 내용을 입력해주세요..');
+          todoList.push(userInput);
+          console.log(`해당 내용이 추가되었습니다.\n추가항목 : ${userInput}`);
+          userInput = prompt(`명령을 입력해주세요!`);
+        } else if (userInput === '보여줘') {
+          if (todoList[0] === undefined) console.log('아무 내용도 없습니다.');
+          for (let i = 0; i < todoList.length; i++) {
+            console.log(`${i}: ${todoList[i]}`);
+          };
+          userInput = prompt(`명령을 입력해주세요!`);
+        } else if (userInput === '삭제') {
+          if (todoList[0]) {
+            todoList.shift();
+            console.log(`Todo Removed`);
+          } else {
+            console.log('현제 목록에는 아무것도 없습니다.');
+          }
+          userInput = prompt(`명령을 입력해주세요!`);
+        } else {
+          alert('올바른 명령을 입력해주세요');
+          userInput = prompt(`명령을 입력해주세요!`);
+        };
+      };
+      console.log('app이 종료되었습니다.');
+    };
+  </script>
+</body>
+</html>
