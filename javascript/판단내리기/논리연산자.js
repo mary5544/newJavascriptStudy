@@ -13,7 +13,7 @@
   ->
     > [ 0~5 무료, 5~10 1000원, 10~20 2000원, 20~65 3000원, 65+ 무료 ]
     const userAge = prompt('나이를 입력해주세요');
-    if ( userAge === true && userAge >= 0 && userAge < 5 || userAge > 65 ) {
+    if ( userAge && userAge >= 0 && userAge < 5 || userAge > 65 ) {
       console.log('가격은 무료 입니다.');
     } else if ( userAge >= 5 && userAge < 10 ) {
       console.log('가격은 1000원 입니다.');

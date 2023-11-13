@@ -11,9 +11,9 @@
     > 'I told her 'go away'' 와 같이 '' 중복불가
     
     (해결법 1) - '' "" 따로 사용
-    I told her "go away"'
+    'I told her "go away"'
 
     (해결법 2) - 이스케이프 리터럴 사용
-    I told her \'go away\''
+    'I told her \'go away\''
   <-
 */
