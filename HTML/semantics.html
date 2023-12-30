@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#9731;html - home&#9731;</title>
+  <style>
+    /* reset */
+    html, body { background-color: rgb(237, 237, 237); }
+    * { margin: 0; padding: 0; box-sizing: border-box; color: #1f1f1f; }
+    a { text-decoration: none; }
+    ul, li { list-style: none; }
+    hr { margin: 10px 0; }
+    td, th { padding: 10px 0; border: 1px solid black; }
+    th { background-color: #e1e1e1; }
+    table .ok { background-color: #bbbbbb; font-weight: bold; }
+    /* wrapper */
+    .wrapper {  padding: 0 34px; }
+    /* header */
+    .header { height: 60px; line-height: 60px; }
+    .header > .logo { font-size: 1.4em; font-weight: bold; }
+    .header nav { float: right; }
+    .header nav li { float: left; }
+    .header nav li:nth-of-type(n+2) { margin-left: 10px; }
+    /* section */
+    header + section { padding: 40px 0; }
+    section { padding: 20px 0 }
+    section > .block { background-color: #bc6bff; padding: 4px 10px; border-radius: 10px; color: #e1e1e1; }
+    section > .block + span { background-color: #776bff; padding: 4px 10px; border-radius: 10px; margin-top: 4px; display: inline-block; color: #e1e1e1; }
+    form label { width: 100px; display: inline-block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: inline-block; text-transform: capitalize; }
+    form input { padding: 10px 10px; cursor: pointer; width: fit-content; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a href="./semantics.html" class="logo">HTML</a>
+      <nav class="menu">
+        <ul>
+          <li><a href="#blIn">
+            Block|Inline
+          </a></li>
+          <li><a href="javascript:void(0)">
+            lorem
+          </a></li>
+          <li><a href="javascript:void(0)">
+            lorem
+          </a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--  -->
+    <main class="sectionWrap">
+      <section id="blIn">
+        <h2>Block, Inline</h2> <hr>
+        <p class="block"><sup>블럭요소는</sup> 전체넓이를 사용한다</p>
+        <span><sup>인라인 요소</sup>는 컨텐츠에 맞게 할당되어 사용된다 </span>
+      </section>
+      <section>
+        <h2>Form, Table</h2> <hr>
+        <table style="width: 100%; text-align: center; table-layout: fixed;">
+          <thead>
+            <tr style="border-bottom: 1px solid black;">
+              <th>Name</th>
+              <th>Name 2</th>
+              <th>Name 3</th>
+              <th>Name 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>오스트레일리아</td>
+              <td colspan="2">200(1)</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>한국</td>
+              <td class="ok">205(2)</td>
+              <td rowspan="3">20000</td개>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>일본</td>
+              <td>205(2)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>미국</td>
+              <td>205(2)</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+        <form action="/text/" style="margin-top: 10px;">
+          <p>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Username" id="username">
+          </p>
+          <p>
+            <label for="password">password</label>
+            <input type="password" placeholder="Password" id="password">
+          </p>
+          <p>
+            <label for="time">time</label>
+            <input type="time" id="time">
+          </p>
+          <p>
+            <label for="color">color</label>
+            <input type="color" id="color">
+          </p>
+        </form>
+      </section>
+    </main>
+    <!--  -->
+    <footer class="footer"></footer>
+  </div>
+</body>
+</html>
