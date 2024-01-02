@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>HTML - FORM</title>
+  <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="inner">
+        <a href="./html.html">HTML FROM</a>
+      </div>
+    </header>
+    <main class="sectionWrap">
+      <section class='terms'>
+        <form action="/membership">
+          <div>
+            <h3 class="title">⌘약관동의</h3>
+            <p class='termsText'>
+              Lorem ipsum dolor sit amet consectetur. Elit elit ut lacinia morbi orci ipsum. Convallis urna nunc ac adipiscing facilisi aliquam in arcu odio. Etiam fermentum tortor bibendum nunc turpis eleifend elit mauris. Mi maecenas risus vel adipiscing odio enim a. Sed nunc maecenas tellus feugiat augue gravida quis.
+              Tortor scelerisque viverra in placerat tortor consectetur vitae lorem nunc. Urna morbi nulla adipiscing proin ullamcorper egestas pellentesque aliquet. Sit amet scelerisque nunc aliquam enim aliquam. Libero volutpat lacus dictum commodo iaculis elementum luctus. Diam turpis donec nunc orci sit metus. Mauris id eu facilisi commodo semper etiam sociis eu porttitor. Orci in aliquet nulla elementum fermentum amet congue.
+              
+            </p>
+            <div class="checkbox">
+              <input type="checkbox" name="agreement" id="agreement" required>
+              <label for="agreement">동의합니다</label>
+            </div>
+          </div>
+          <div>
+            <h3 class="title">⌘회원정보</h3>
+            <div>
+              <label for="id">ID<span class="rad">*아이디는 3 ~ 10 자리 까지 작성해주세요</span></label>
+              <input type="text" name="id" id="id" minlength="3" maxlength="10" required placeholder="아이디를 입력해주세요">
+            </div>
+            <div class="pwform">
+              <label for="pw">PW<span class="rad">*비밀번호는 6 ~ 20 자리 까지 작성해주세요</span></label>
+              <input type="password" name="pw" id="pw" minlength="6" maxlength="20" required placeholder="비밀번호를 입력해주세요">
+              <input type="password" name="pw" id="pw" minlength="6" maxlength="20" required placeholder="비밀번호를 한번 더 입력해주세요">
+            </div>
+            <div class="btnWrap">
+              <button>확인</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="inner">
+        <p>HTML</p>
+        <p>대표자 : 김성민</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

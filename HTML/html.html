@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#9731;html - home&#9731;</title>
+  <link rel="shortcut icon" href="./img/poplogo.png" type="image/x-icon">
+  <style>
+    /* reset */
+    html, body { background-color: rgb(237, 237, 237); scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; color: #1f1f1f; }
+    a { text-decoration: none; }
+    ul, li { list-style: none; }
+    hr { margin: 10px 0; }
+    td, th { padding: 10px 0; border: 1px solid black; }
+    th { background-color: #e1e1e1; }
+    table .ok { background-color: #bbbbbb; font-weight: bold; }
+    /* header */
+    .header { height: 60px; line-height: 60px; padding: 0 34px; background-color: #ffd86b; }
+    .header > .logo { font-size: 1.4em; font-weight: bold; }
+    .header nav { float: right; }
+    .header nav li { float: left; }
+    .header nav li:nth-of-type(n+2) { margin-left: 10px; }
+    /* section */
+    main { padding: 0 34px; }
+    header + section { padding: 40px 0; }
+    section { padding: 20px 0 }
+    section > .block { background-color: #bc6bff; padding: 4px 10px; border-radius: 10px; color: #e1e1e1; }
+    section > .block + span { background-color: #776bff; padding: 4px 10px; border-radius: 10px; margin-top: 4px; display: inline-block; color: #e1e1e1; }
+    form label { width: 100px; display: inline-block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; display: inline-block; text-transform: capitalize; }
+    form input { padding: 10px 10px; cursor: pointer; width: fit-content; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a href="../index.html" class="logo">HTML</a>
+      <nav class="menu">
+        <ul>
+          <li><a href="#blIn">
+            Block|Inline
+          </a></li>
+          <li><a href="#fitness">
+            Fitness
+          </a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--  -->
+    <main class="sectionWrap">
+      <section id="blIn">
+        <h2>Block, Inline</h2> <hr>
+        <p class="block"><sup>블럭요소는</sup> 전체넓이를 사용한다</p>
+        <span><sup>인라인 요소</sup>는 컨텐츠에 맞게 할당되어 사용된다 </span>
+      </section>
+      <section>
+        <h2>Form, Table</h2> <hr>
+        <table style="width: 100%; text-align: center; table-layout: fixed;">
+          <thead>
+            <tr style="border-bottom: 1px solid black;">
+              <th>Name</th>
+              <th>Name 2</th>
+              <th>Name 3</th>
+              <th>Name 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>오스트레일리아</td>
+              <td colspan="2">200(1)</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>한국</td>
+              <td class="ok">205(2)</td>
+              <td rowspan="3">20000</td개>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>일본</td>
+              <td>205(2)</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>미국</td>
+              <td>205(2)</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 style="margin-top: 10px;">input</h3>
+        <form action="/text" style="margin-top: 10px;">  <!-- action은 submit 버튼을 누를시 form 제출 위치 -->
+          <p>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Username" id="username" name="username" minlength="1" maxlength="10" required> <!-- name속성의 값을 서브밋 버튼을 누른 후 주소창에서 확인해보자 -->
+          </p>
+          <p>
+            <label for="password">password</label>
+            <input type="password" placeholder="Password" id="password" name="pw" minlength="1" maxlength="20" required>
+          </p>
+          <p>
+            <label for="time">time</label>
+            <input type="time" id="time" name="time" required>
+          </p>
+          <p>
+            <label for="color">color</label>
+            <input type="color" id="color" name="color" required>
+          </p>
+          <p>
+            <label for="phNumber">phone number : </label>
+            <input type="text" placeholder="number..." id="phNumber" name="text" minlength="11" maxlength="11" required>
+          </p>
+          <p>
+            <button>Submit</button> <!-- button 기본속성은 submit -->
+            <button type="button">Function Button</button> <!-- 기능 버튼으로서 사용하려면 button을 속성으로 주자 -->
+          </p>
+          <p>
+            <input type="button" value="Input button"> <!-- input으로도 버튼을 만들 수 있다 -->
+            <input type="submit" value="input submit button">
+          </p>
+        </form>
+        <h3 style="margin-top: 30px; padding-bottom: 1em;">입력데이터 search</h3>
+        <div>
+          <form action="https://www.google.com/search">
+            <input type="text" name="q" placeholder="구글" required>
+            <button>Submit</button>
+          </form>
+          <form action="https://www.youtube.com/results">
+            <input type="text" name="search_query" placeholder="유튜브" required>
+            <button>Submit</button>
+          </form>
+          <form action="https://search.naver.com/search.naver">
+            <input type="text" name="query" placeholder="네이버" required>
+            <button>Submit</button>
+          </form>
+        </div>
+        <h3 style="margin-top: 30px;">Radio</h3>
+        <form action="/form_test">
+          <input type="radio" name="size" id="XL" value="XL" required>
+          <label for="XL">XL</label>
+          <input type="radio" name="size" id="L" value="L" required>
+          <label for="L">L</label>
+          <input type="radio" name="size" id="M" value="M" required>
+          <label for="M">M</label>
+          <input type="radio" name="size" id="S" value="S" required>
+          <label for="S">S</label>
+          <button>Submit</button>
+        </form>        
+        <h3 style="margin-top: 30px;">Select</h3>
+        <form action="/form_test">
+          <select name="food" id="foodList" required>
+            <option value="0" selected>--주문하실 음식을 골라주세요--</option>
+            <option value="1">피자</option>
+            <option value="2">치킨</option>
+            <option value="3">돈까스</option>
+            <option value="4">덮밥</option>
+            <option value="5">토스트</option>
+          </select>
+          <div>
+            <input type="range" name="spicy" id="spicy" min="0" max="100" step="10" value="0">
+            <label for="spicy">맵기조절</label>
+          </div>
+          <div style="margin-top: 10px;">
+            <textarea name="request" id="request" cols="30" rows="5" placeholder="요청사항을 입력해세요"></textarea>
+          </div>
+          <button>Submit</button>
+        </form>
+        <h2 style="margin-top: 40px;" id="fitness">헬스 회원등록</h2>
+        <hr>
+        <form action="/dummy" style="margin-top: 20px;">
+          <div>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName" style="margin-left: 20px;">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <div>
+            <p>Select a Race :</p>
+            <input type="radio" name="fit" id="fum" value="fum" required>
+            <label for="fum">운동을 자주하는편</label>
+            <input type="radio" name="fit" id="middle" value="mid" required>
+            <label for="middle">때떄로 운동을 한다</label>
+            <input type="radio" name="fit" id="not" value="not" required>
+            <label for="not">운동을 거의 안한다</label>
+          </div>
+          <div>
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" required>
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div>
+            <label for="age">Select age</label>
+            <select name="age" id="age">
+              <option value="under 18">under 18</option>
+              <option value="20 ~ 40">20 ~ 40</option>
+              <option value="40 ~ 60">40 ~ 60</option>
+              <option value="60+">60+</option>
+            </select>
+          </div>
+          <button>가입</button>
+        </form>
+      </section>
+      <a href="./form.html">FORM - 01</a>
+    </main>
+    <footer class="footer" style="height: 60px; background-color: #dbdbdb; margin-top: 20px;">
+      <div class="inner">
+        <p style="line-height: 60px; text-align: center;">@mary5544</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

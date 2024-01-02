@@ -1,0 +1,39 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* reset */
+* { margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; font-size: 100%; }
+a { text-decoration: none; }
+ul, li { list-style: none; }
+
+/* Short Cut Class */
+.bold { font-weight: 700; }
+.uL { position: relative; font-size: 24px; display: inline-block; }
+.uL::before { position: absolute; content: ''; width: 300px; height: 4px; background-color: #000; left: 0; bottom: -12px; transform: translateX(-15%); border-radius: 50px; }
+
+/* layout */
+/* -- header */
+header { height: 72px; }
+header > .inner { display: flex; justify-content: center; align-items: center; height: 100%; }
+header > .inner > a { color: #000; font-size: 24px; }
+/* -- main */
+.section--wrap .inner > section:nth-of-type(n+2) { margin-top: 95px; width: 1636px; margin: 0 auto; }
+section.topBanner { height: 364px; border: 1px solid #000; }
+section.contetsList > .title { text-align: center; margin-top: 50px; }
+section.contetsList > .classList { display: grid; grid-template-columns: repeat(4, 1fr); justify-content: space-between; text-align: center; text-transform: capitalize; margin-top: 50px; }
+section.contetsList > .classList a { display: inline-block; width: auto; }
+section.contetsList > .classList .icon { width: 335px; height: 335px; border: 1px solid #000; border-radius: 16px; display: inline-block; }
+section.contetsList > .classList a:nth-of-type(n+5) { margin-top: 40px; }
+
+/* media */
+@media (max-width: 426px){
+  /* -- header */
+  header { height: 46px; }
+  header > .inner > a { color: #000; font-size: 24px; }
+  /* -- main */
+  .section--wrap .inner > section:nth-of-type(n+2) { margin-top: 95px; width: 100%; }
+  section.topBanner { height: 106px; }
+  section.contetsList > .classList { display: grid; grid-template-columns: repeat(2, 1fr); }
+  section.contetsList > .classList .icon { width: 112px; height: 112px; }
+  section.contetsList > .classList a:nth-of-type(n+3) { margin-top: 40px; }
+}
