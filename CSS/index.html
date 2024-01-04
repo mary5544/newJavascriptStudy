@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="a">
+      <h1>text underLine</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore est dolorum deserunt rem eos similique porro quidem alias sit ipsa? Corporis hic sunt, vero cum eaque deleniti ut sequi facere.
+      </p>
+    </div>
+    <!--  -->
+    <h3>단위</h3>
+    <div style="margin-top: 30px; display: flex;" class="wa">
+      <div style="display: inline-block; padding: 10px; border: 1px solid #000; border-radius: 14px;">
+        <h2 style="text-align: center; padding-bottom: 14px;">px</h2>
+        <p>
+          절대 단위 픽셀, 다른요소의 영향을 받지 않는다.<br>
+        </p>
+        <p class="red" >*반응형웹에 비추</p>
+      </div>
+      <div style="display: inline-block; padding: 10px; border: 1px solid #000; border-radius: 14px;">
+        <h2 style="text-align: center; padding-bottom: 14px;">%</h2>
+        <p>
+          부모 컨테이너 크기를 기준으로 크기를 지정한다<br>
+        </p>
+      </div>
+      <div style="display: inline-block; padding: 10px; border: 1px solid #000; border-radius: 14px;">
+        <h2 style="text-align: center; padding-bottom: 14px;">em</h2>
+        <p>
+          부모로 부터 상속받은 font-size 기준으로 크기를 지정한다.<br>
+          ex> 부모: font-size 20px -> 자식: 1em === 20px
+        </p>
+        <p class="red">
+          단점: 요소가 중첩되면 단계별로 다른크기가 적용됨
+        </p>
+      </div>
+      <div style="display: inline-block; padding: 10px; border: 1px solid #000; border-radius: 14px;">
+        <h2 style="text-align: center; padding-bottom: 14px;">rem</h2>
+        <p>
+          루트 font-size를 기준으로 따른다
+        </p>
+      </div>
+    </div>
+    <!--  -->
+    <div class="boxWrap">
+      <h3>BOX Model</h3>
+      <div style="margin-top: 30px;">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="Position">
+      <h3>Position Property</h3>
+      <div class="static">
+        <strong style="font-size: 1.8rem; padding: 10px 0;">static</strong>
+        <div style="padding: 10px 0;">
+          <div class="box"></div>
+          <div class="box" id="point"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <strong style="font-size: 1.8rem; padding: 10px 0;">relative</strong>
+        <div style="padding: 10px 0;">
+          <div class="box"></div>
+          <div class="box" id="point"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="absolute">
+        <strong style="font-size: 1.8rem; padding: 10px 0;">absolute</strong>
+        <div style="padding: 10px 0;">
+          <div class="box"></div>
+          <div class="box" id="point"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+    <div style="margin-top: 500px;"></div>
+      <!-- 연습 -->
+    <h3>float left ::after 활용</h3>
+    <div class="floatBox-01">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="nextContent"></div>
+
+    <!-- 연습 -->
+    <h3>flow-root활용</h3>
+    <div class="floatBox-02">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="nextContent"></div>
+    </div>
+
+</body>
+</html>

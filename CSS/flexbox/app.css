@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+}
+h1 {
+  text-align: center;
+}
+
+#container {
+  background-color: #003049;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+  border-radius: 1em;
+  display: flex;
+  /* flex-direction: 컨테이너 안에서 본축 방향을 결정하는 속성 */
+  flex-direction: row;
+  /* justify-content: 본축을 기준으로 메인(X)축 정렬방식 */
+  justify-content: center;
+  /* flex-wrap: 본축을 기준으로 크로스(Y)축 결정방식*/
+  /* flex-wrap: wrap; */
+  /* align-items: 크로스 축의 정렬방식 */
+  align-items: center;
+}
+#container div {
+  width: 200px;
+  /* max-width: 200px; */
+  height: 200px;
+  /* flex-basis: 요소가 배치될 떄의 최초 크기 */
+  flex-basis: 200px;
+}
+#container div:nth-of-type(3) {
+  /* align-self: 개별 크로스축 요소정렬 */
+  align-self: flex-start;
+}
+#container div:nth-of-type(1) {
+  /* flex-grow: 남는 공간에 대한 요소 할당비율 */
+  flex-grow: 1;
+}
+#container div:nth-of-type(5) {
+  /* flex-shrink: 컨테이너 크기가 줄어들때 요소 축소 비율  *디폴트 1 */
+  flex-shrink: 0;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1.4rem;
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+  border: 5px solid black;
+  border-radius: 1em;
+  height: 500px;
+  display: flex;
+}
+/* flex 속기법 */
+/*
+  flex: flex-grow, flex-shrink, flex-basis
+  ex)
+  flex: 2 = grow
+  flex: 1 30px = grow, basis
+  flex: 2 2 = grow, shrink
+  flex: 2 2 10% = grow, shrink, basis 
+*/
+main .sidebar {
+  background-color: #6930c3;
+  border: 2px solid rgb(58, 58, 58);
+  flex: 1 2 300px;
+}
+main .maincontent {
+  background-color: #c33068;
+  flex: 2 1 800px;
+}
